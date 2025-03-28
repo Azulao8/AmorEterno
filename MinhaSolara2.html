@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Texto Especial</title>
+    <audio id="player" autoplay>
+        <source src="/musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
+        <source src="/musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    
+    <script>
+        const musicas = [
+            "/musicas/musica1.mp3",
+            "/musicas/musica2.mp3"
+        ];
+        
+        let index = 0;
+        const player = document.getElementById("player");
+        
+        player.volume = 0.1; // Define o volume para 10% (bem baixo)
+    
+        player.addEventListener("ended", function () {
+            index = (index + 1) % musicas.length; // Alterna entre as músicas
+            player.src = musicas[index];
+            player.play();
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url('/imgs/Copia_de_you_3.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo translúcido para facilitar a leitura */
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            filter: grayscale(100%);
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #c00;
+        }
+
+        .content p {
+            margin-top: 20px;
+            color: #ddd;
+        }
+
+        .image-container {
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Nosso Momento Especial</h1>
+        <p>Não é só isso… Eu lembro de muito mais, como o fato de que você não gosta que te chame pelo seu nome por causa da carga emocional que ele carrega, ou que você tem 9 gatos, o Pingo, a Ravena, o Chorão, o Capuccino, e os outros que você ainda não me falou o nome, ksksk. Seu aniversário é 29 de outubro, você nasceu em 2001 e tem 23 anos. Você ama a música '10’s (2016 Remaster)' porque foi dedicada a você, 'você é linda assim como esse solo de guitarra.' Sua banda favorita é 'Type O Negative', e claro, muitas coisas que só falo em poesias, mas ainda é pouco para expressar tudo o que sei e sinto por você. Como você disse: 'Eu te amo tanto que a única maneira que eu poderia mostrar isso é abrindo meu peito e te dando meu coração.' E mesmo assim, não seria o suficiente, porque para mim você é meu universo, tão grande e vasto, cheio de maravilhas e beleza, assim como uma nebulosa formando sua constelação. Se fosse para te definir, seus cabelos seriam como uma nebulosa, seus olhos como duas Vicanis Majores, e seu sorriso, como a explosão de uma nova que toma conta de todo o ambiente e faz a escuridão se afastar. Essa imagem aqui, logo que você deu esse sorriso, eu não pensei duas vezes. Fiquei vidrado. Meus olhos viraram e vi o sorriso mais lindo de toda a minha vida, e não é exagero. E eu quero mais disso. Quero mais de você. Quero muito viver isso e me tornar um só com você, por toda a eternidade...</p>
+        
+        <div class="image-container">
+            <img src="/imgs/sorriso mais lindo.png" alt="Imagem de Solara">
+        </div>
+        <p>e para finalizar...br</p>
+        <a href="/MinhaSolara3.html">👉🔆Aqui🔆👈</a>
+    </div>
+</body>
+</html>

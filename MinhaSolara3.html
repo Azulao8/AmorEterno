@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+            text-align: center;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .message.show {
+            opacity: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2rem;
+            animation: float 4s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            50% { transform: translateY(-100px) scale(1.2); }
+            100% { transform: translateY(-200px) scale(0.8); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Nosso Amor</h1>
+        <p>Clique na tela para espalhar amor 💖</p>
+        <p class="message" id="hiddenMessage">Eu te amo, minha Solara! Para sempre! ❤️</p>
+    </div>
+
+    <script>
+        document.body.addEventListener('click', function(event) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = event.clientX + 'px';
+            heart.style.top = event.clientY + 'px';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        });
+
+        setTimeout(() => {
+            document.getElementById('hiddenMessage').classList.add('show');
+        }, 3000);
+    </script>
+</body>
+</html>
