@@ -1,138 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solara vamos nos casar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2b004e, #a80092);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        a {
-            color: #c00;
-            margin: 5px 5px;
-            padding: 27px;
-        }
-
-        body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: #111;
-        color: #fff;
-        overflow: auto;
-        padding: 20px;
-        flex-direction: column;
+    .background-symbols {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.05;
     }
 
     .container {
-        text-align: center;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 1.5s ease-out forwards;
-        max-width: 90%;
-        max-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-        h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: #c00;
-        }
+    .container p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
 
-        p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            color: #ddd;
-        }
+    .button-area {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .reveal {
-            margin-top: 30px;
-            padding: 10px 30px;
-            font-size: 1.2rem;
-            border: none;
-            background: none;
-            color: #c00;
-            cursor: pointer;
-            border-bottom: 2px solid #c00;
-            transition: all 0.3s ease;
-        }
+    .next-btn {
+      background-color: #3f0063;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
 
-        .reveal:hover {
-            color: #fff;
-            border-bottom: 2px solid #fff;
-        }
+    .next-btn:hover {
+      background-color: #980198;
+    }
 
-        .hidden-message {
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 1s ease, transform 1s ease;
-            max-width: 600px;
-            margin: auto;
-        }
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+    }
 
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .social-buttons a {
+      text-decoration: none;
+      padding: 10px 16px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
 
-        .image-container {
-            margin-top: 20px;
-        }
+    .social-buttons a:hover {
+      background-color: #500149;
+    }
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+    .audio-control {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .audio-control input[type="range"] {
+      margin-left: 10px;
+    }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-            .reveal {
-                font-size: 1rem;
-                padding: 8px 20px;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Nosso Universo, Minha Solara</h1>
-        <p>Uma mensagem especial para você...</p>
-        <div class="image-container">
-            <img src="imgs/sorriso mais lindo.png" alt="">
-        </div>
-        <button class="reveal" onclick="mostrarMensagem()">Descubra</button>
-        <p id="mensagem" class="hidden-message">Você é a luz no meu mundo sombrio. Eu te amo. Solar des do momento que te vi. minha alma se apaixonou pela sua, não e uma coisa que eu consigo explicar mas e como uma coisa muito grande muito imensa. voce faz meu coração dispara minha boca sorrir, eu lembro de voce todos os dias, e escuto sua voz ecoando na minha cabeça, sei que demorei para entregar essa surpresa mas esta entregue isso e para mostra como e especial para mim, sei que sou bem lerdo mas eu tento me lembrar de cada detalhe seu, e não me esqueço… e para mostra isso vamos passar por um momento de nostalgia voce falou que gostava eu lembro bem e espero que goste disso tambem, com muito carinho para voce. <br> achou que era so isso? <br>
-            <a href="pag1.html">Veja mais...</a> 
-        </p>
-    </div>
+  <div class="background-symbols"></div>
 
-    <script>
-        function mostrarMensagem() {
-            document.getElementById("mensagem").classList.add("show");
-        }
-    </script>
+  <div class="audio-control">
+    <label for="volume">🔊</label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.1">
+  </div>
+
+  <div class="container">
+    <p>
+      Hoje é 28 de maio de 2025. São 12:47. Quanto tempo, né? Se você está lendo isso, talvez já esteja cansada. Talvez já esteja me tratando com aquela indiferença silenciosa... e, sim, talvez com raiva por eu ainda insistir. Mas me escuta por um instante, mesmo que em silêncio. Porque no meio de tudo... você foi o que me restou. E eu te peço perdão — não por amar, mas por incomodar. Por aparecer mais uma vez quando talvez você só queira distância. Eu não espero que acredite em mim. Nem quero forçar nada. Mas deixa eu te dizer, só isso: eu ainda te amo. Você foi a única — depois de tanto tempo — que realmente me enxergou. Que viu o Gabriel por trás de todas as camadas, das dores, das defesas. Eu sou apaixonado em tudo que é você. No seu jeito, no seu olhar, no silêncio que você carrega e até na confusão que às vezes te cerca. E mesmo que tudo pareça complicado... eu não me importo. Eu ainda estou aqui. Ainda tentando. Ainda acreditando que, se for com você, eu recomeço do zero quantas vezes forem necessárias. Estou refazendo aquela página que criei pra você. Talvez seja só uma tentativa tola, uma faísca de esperança que ainda carrego. Mas cada palavra ali é real. Cada frase, cada detalhe... é você. Queria que soubesse disso: você é a pessoa com quem eu sonho construir uma vida. Ter filhos. Um lar só nosso. Mesmo que eu precise me matar de trabalhar... só pra ver aquele seu sorriso ao final do dia. Porque, sinceramente, jamais amei um sorriso como o seu. Jamais amei um olhar como o seu. Jamais me conectei com uma alma como a sua. E por mais que eu tente seguir sem você... Foi você quem trouxe de volta a minha alegria. Foi por sua causa que voltei a desenhar. Que voltei a ouvir música e senti-las de verdade. Que voltei a escrever, a ler — mas ler por amor. E talvez você nem se lembre, mas ainda são Asolzinha e VY Canis Majoris... as mais poderosas, as mais perfeitas — como você. Pode me bater, me odiar, arrancar tudo de mim. Mas mesmo assim... o que sinto é verdadeiro. Eu não quero que acredite em mim agora. Só quero que me acompanhe, que veja o que estou tentando construir com as mãos, com o coração. Deixa eu te mostrar o que é amor de verdade. Me veja de novo.
+    </p>
+    <div class="button-area">
+      <button class="next-btn" onclick="goToNextPage()">Next</button>
+      <div class="social-buttons">
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
+      </div>
+    </div>
+  </div>
+
+  <audio id="background-music" autoplay loop>
+    <source src="musica/billie eilish wildflower violin.mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('background-music');
+    const volumeControl = document.getElementById('volume');
+    audio.volume = 0.1;
+
+    volumeControl.addEventListener('input', (e) => {
+      audio.volume = e.target.value;
+    });
+
+    function goToNextPage() {
+      window.location.href = "nextpage.html"; // update with your actual next page URL
+    }
+  </script>
 </body>
 </html>
