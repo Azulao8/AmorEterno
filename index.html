@@ -13,11 +13,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* <- Mudei de center para flex-start */
       min-height: 100vh;
       padding: 20px;
       position: relative;
-      overflow: hidden;
+      overflow-y: auto; /* <- Permite rolagem vertical */
     }
 
     .background-symbols {
@@ -117,39 +117,40 @@
 
   <div class="audio-control">
     <label for="volume">🔊</label>
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.1">
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.3">
   </div>
 
   <div class="container">
     <p>
       Hoje é 28 de maio de 2025. São 12:47. Quanto tempo, né? Se você está lendo isso, talvez já esteja cansada. Talvez já esteja me tratando com aquela indiferença silenciosa... e, sim, talvez com raiva por eu ainda insistir. Mas me escuta por um instante, mesmo que em silêncio. Porque no meio de tudo... você foi o que me restou. E eu te peço perdão — não por amar, mas por incomodar. Por aparecer mais uma vez quando talvez você só queira distância. Eu não espero que acredite em mim. Nem quero forçar nada. Mas deixa eu te dizer, só isso: eu ainda te amo. Você foi a única — depois de tanto tempo — que realmente me enxergou. Que viu o Gabriel por trás de todas as camadas, das dores, das defesas. Eu sou apaixonado em tudo que é você. No seu jeito, no seu olhar, no silêncio que você carrega e até na confusão que às vezes te cerca. E mesmo que tudo pareça complicado... eu não me importo. Eu ainda estou aqui. Ainda tentando. Ainda acreditando que, se for com você, eu recomeço do zero quantas vezes forem necessárias. Estou refazendo aquela página que criei pra você. Talvez seja só uma tentativa tola, uma faísca de esperança que ainda carrego. Mas cada palavra ali é real. Cada frase, cada detalhe... é você. Queria que soubesse disso: você é a pessoa com quem eu sonho construir uma vida. Ter filhos. Um lar só nosso. Mesmo que eu precise me matar de trabalhar... só pra ver aquele seu sorriso ao final do dia. Porque, sinceramente, jamais amei um sorriso como o seu. Jamais amei um olhar como o seu. Jamais me conectei com uma alma como a sua. E por mais que eu tente seguir sem você... Foi você quem trouxe de volta a minha alegria. Foi por sua causa que voltei a desenhar. Que voltei a ouvir música e senti-las de verdade. Que voltei a escrever, a ler — mas ler por amor. E talvez você nem se lembre, mas ainda são Asolzinha e VY Canis Majoris... as mais poderosas, as mais perfeitas — como você. Pode me bater, me odiar, arrancar tudo de mim. Mas mesmo assim... o que sinto é verdadeiro. Eu não quero que acredite em mim agora. Só quero que me acompanhe, que veja o que estou tentando construir com as mãos, com o coração. Deixa eu te mostrar o que é amor de verdade. Me veja de novo.
+      O propósito dessa página... não é te convencer. É só um espaço onde posso respirar — onde posso colocar o que penso, o que ainda sinto... por você. Talvez eu nunca tenha uma resposta. Talvez, ao ler isso, você fique com raiva. Talvez brigue comigo em silêncio. Mas ainda assim... eu precisava tentar. Porque de alguma forma, mesmo machucado, mesmo sem certezas — eu continuo aqui. Eu depositei tudo em você. E sei... você sempre foi mais forte do que eu. Eu não consigo desistir. Mesmo quando tudo diz que eu deveria. E talvez agora você nem pense mais em mim. Mas eu... ainda penso em você. Pode parecer ridículo, pode parecer patético — talvez eu esteja errado, de novo. Não seria novidade, né? ksksks Mas isso não muda o fato de que você ainda é a Sol que eu conheci. A Sol que me fez sentir. A Sol que me fez acreditar. E mesmo que você me ignore agora... tá tudo bem. Porque uma hora, sim, eu vou cansar. Eu vou aceitar que preciso te deixar em paz. Mas antes disso, me deixa tentar uma última vez... Porque eu ainda lembro do que você dizia: “Eu não vou desistir fácil.” E por mais que o tempo passe, por mais que tudo mude... Você ainda é o Sol que eu amo. E mesmo que o mundo me cale, uma coisa eu prometo: Eu jamais vou te maltratar. Porque quando alguém mora tão fundo na gente, nem a dor muda o amor que ficou.
     </p>
     <div class="button-area">
       <button class="next-btn" onclick="goToNextPage()">Next</button>
       <div class="social-buttons">
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://discord.com" target="_blank">Discord</a>
+        <a href="https://www.tiktok.com/@ultraviolento29?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/zaypn7/" target="_blank">Instagram</a>
+        <a href="https://discord.gg/QvTwQwVb" target="_blank">Discord</a>
       </div>
     </div>
   </div>
 
   <audio id="background-music" autoplay loop>
-    <source src="musica/billie eilish wildflower violin.mp3">
+    <source src="musica/billie_eilish_wildflower_violin.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <script>
     const audio = document.getElementById('background-music');
     const volumeControl = document.getElementById('volume');
-    audio.volume = 0.1;
+    audio.volume = 0.3;
 
     volumeControl.addEventListener('input', (e) => {
       audio.volume = e.target.value;
     });
 
     function goToNextPage() {
-      window.location.href = "nextpage.html"; // update with your actual next page URL
+      window.location.href = "pag1.html"; // update with your actual next page URL
     }
   </script>
 </body>
