@@ -4,29 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Imagens</title>
-    <audio id="player" autoplay>
-        <source src="musica/10's (2016 Remaster).mp3" type="audio/mpeg">
+    
+    <!-- PLAYER DE MÚSICA -->
+    <audio id="player" autoplay loop>
         <source src="musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
         Seu navegador não suporta áudio.
     </audio>
-    
-    <script>
-        const musicas = [
-            "/musicas/musica1.mp3",
-            "/musicas/musica2.mp3"
-        ];
-        
-        let index = 0;
-        const player = document.getElementById("player");
-        
-        player.volume = 0.1; // Define o volume para 10% (bem baixo)
-    
-        player.addEventListener("ended", function () {
-            index = (index + 1) % musicas.length; // Alterna entre as músicas
-            player.src = musicas[index];
-            player.play();
-        });
-    </script>
+
     <style>
         * {
             margin: 0;
@@ -35,13 +19,8 @@
             font-family: 'Arial', sans-serif;
         }
 
-        a {
-            color: #c00;
-            padding: 20px;
-        }
-
         body {
-            background-color: #111;
+            background: linear-gradient(to bottom, #590074, #5f0063); /* rosa para azul */
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -49,7 +28,26 @@
 
         h1 {
             color: #c00;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .volume-control {
+            margin-bottom: 30px;
+            background-color: rgba(124, 0, 161, 0.7);
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .volume-control label {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .volume-control input[type="range"] {
+            width: 100px;
         }
 
         .gallery {
@@ -61,7 +59,7 @@
         }
 
         .gallery-item {
-            background-color: #222;
+            background-color: #59017c6e;
             padding: 10px;
             border-radius: 10px;
             text-align: center;
@@ -83,6 +81,11 @@
             color: #ddd;
         }
 
+        a {
+            color: #c00;
+            padding: 20px;
+        }
+
         @media (max-width: 768px) {
             .gallery {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -91,68 +94,109 @@
     </style>
 </head>
 <body>
-    <h1>Em reforma</h1>
+
+    <h1>Nos podemos?</h1>
+
+    <!-- CONTROLE DE VOLUME ABAIXO DO TÍTULO -->
+    <div class="volume-control">
+        <label for="volume">Volume 🎵</label>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.03">
+    </div>
+
     <div class="gallery">
         <div class="gallery-item">
-            <img src="imgs/IMG_20250301_014525_323.webp" alt="Descrição da imagem 1">
-            <p>Tudo o que me manda, tudo o que diz, está gravado em meu ser como um sussurro eterno nas sombras. Nada do que você me deu será esquecido.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/IMG_20250301_014903_444.jpg" alt="Descrição da imagem 2">
-            <p>Fico olhando cada uma dessas imagens que me manda, perdido em cada detalhe, te desejando como o sonho proibido de um cientista obcecado, em um universo onde só você existe.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/IMG_20250301_014534_119.webp" alt="Descrição da imagem 3">
-            <p>Meu amor, desde o momento em que comecei a criar este site, minha única intenção foi te mostrar o quanto te quero e o quanto estou obcecado por você, minha Vy Canis Major, a estrela que ilumina minha escuridão.</p>
-        </div>
-        <!-- so para não me perder -->
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_tela_2025-03-06_162230.png" alt="Descrição da imagem 3">
-            <p>Nossa persistência e força em focar e não desistir transformaram o impossível em algo tangível. Esse dia foi um teste e tanto, mas juntos superamos, e depois, tudo pareceu mais fácil.</p>
-        </div>
-        <div class="gallery-item">
             <img src="imgs/Captura_de_tela_2025-03-08_112422.png" alt="Descrição da imagem 3">
-            <p>Essa imagem, eu queria reproduzir na vida real com você, quando formos viajar e pegarmos uma linda noite de lua cheia, onde o céu será nosso e a magia será só nossa.</p>
+            <p>
+                Me diz uma coisa... você também sente que, apesar de tudo, alguma parte aí dentro ainda lembra do que fomos?
+
+A gente era novo. E sim... fomos ingênuos.
+
+Não estávamos prontos. Não pra tudo que sentimos, não pro que o mundo jogou em cima da gente.
+
+Mas não foi só o que aconteceu que separou a gente.
+
+A vida virou de ponta-cabeça. Tudo mudou.
+
+E sabe o que é curioso?
+
+Nós mudamos também.
+
+E por mais estranho que pareça... isso é bom.
+
+Porque agora, quando olho pra você, não vejo só aquela menina que me fazia rir com qualquer besteira...
+
+Vejo uma mulher.
+Forte, intensa, bonita de um jeito que vai além do que os olhos enxergam.
+
+E eu gosto disso.
+
+Gosto de quem você é.
+
+E antes que essa página se perca como tantas outras conversas que não tivemos... me deixa dizer só mais uma coisa:
+
+Me desculpa.
+
+Nunca foi minha intenção te magoar.
+
+E se em algum momento pareceu que o que eu sentia tinha sumido... não se engane.
+
+Porque o que sinto por você é o mesmo desde o primeiro dia.
+
+Nunca mudou.
+
+Nunca vai ser leve esquecer alguém que fez a alma acordar.
+
+E você foi exatamente isso: o despertar da minha alma.
+            </p>
+            <p>
+                Eu sei... talvez não dê mais pra continuar.
+
+Talvez tudo tenha passado do ponto. Talvez a gente já tenha se machucado demais, falado de menos, e esperado por respostas que nunca vieram.
+
+Mas, mesmo assim...
+
+Eu acredito em uma coisa:
+
+Acredito no que você acredita.
+
+Porque eu sei que, no fundo — bem no fundo — você ainda acredita que dá pra recomeçar.
+
+Não como antes. Mas com mais verdade.
+Com mais calma.
+Com mais presença.
+
+Eu vejo isso em você... essa esperança discreta que esconde no meio do olhar quando finge que já não sente mais nada.
+
+E talvez a gente não precise de promessas.
+Talvez tudo que a gente precise...
+
+seja só uma chance de sentir de novo.
+
+Só isso.
+            </p>
         </div>
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_tela_2025-03-08_155213.png" alt="Descrição da imagem 3">
-            <p>E claro, não pode faltar nós dois aprontando, ksksksks, invadindo a sala dos admins e deixando nossa marca, como sempre fazemos, causando no nosso próprio universo.</p>
-        </div>
-        <!-- so para não me perder -->
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_345.png" alt="Descrição da imagem 3">
-            <p>Nesse dia, estávamos vendo os mapas e encontramos o mapa árabe. Você se divertiu tanto, e eu nunca me esqueço de cada risada sua, como se o mundo todo tivesse parado só para ouvir você.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_358.png" alt="Descrição da imagem 3">
-            <p>Em um dos seus jogos preferidos, a sua animação ao pegar um papagaio foi tão maravilhosa que parecia que o mundo inteiro tinha ganho. E, claro, você ainda me zuou, ksksksks, como só você sabe fazer.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_363.png" alt="Descrição da imagem 3">
-            <p>Nesse dia, estávamos bem relaxados, acho que com um pouco de preguiça, só curtindo o tempo juntos e conversando sem pressa, como se o mundo pudesse esperar.</p>
-        </div>
-        <!-- so para não me perder -->
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_412.png" alt="Descrição da imagem 3">
-            <p>Nessa aqui, tentaram nos separar, mas até em outra realidade, continuamos juntos, mais fortes do que nunca, porque nosso vínculo é eterno e impossível de quebrar.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_489.png" alt="Descrição da imagem 3">
-            <p>Aqui, conseguimos o picolé juntos, e naquele mesmo dia nos desafiamos a ver quanto tempo conseguiríamos ficar sem parar. Acabamos que conseguimos rapidinho, ksksks, como sempre, a diversão nunca tem limites com você.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_Tela_441.png" alt="Descrição da imagem 3">
-            <p>E aqui foi quando conseguimos pela segunda vez, bem fácil, ksksk. E você, ainda achou a miniatura do Lula Molusco muito boa, ksksks, como sempre, fazendo até as coisas mais simples se tornarem hilárias.</p>
-        </div>
-        <!-- Adicione mais imagens conforme necessário -->
     </div>
-    <div>
-        <p>
-            vvvvv
-        </p>
-    </div>
-    <div>
-        <a href="pag2.html">Veja mais...</a>
-    </div>
+
+    <div><p>🔽</p></div>
+    <div><a href="pag2.html">Veja mais...</a></div>
+
+    <!-- SCRIPT DE CONTROLE DE MÚSICA -->
+    <script>
+        const player = document.getElementById("player");
+        const volumeControl = document.getElementById("volume");
+
+        // Volume inicial baixo
+        player.volume = 0.03;
+
+        // Alterar volume em tempo real
+        volumeControl.addEventListener("input", () => {
+            player.volume = volumeControl.value;
+        });
+
+        // Força o autoplay após interação (caso necessário por bloqueio do navegador)
+        document.addEventListener("click", () => {
+            player.play().catch(err => console.log("Autoplay bloqueado:", err));
+        }, { once: true });
+    </script>
 </body>
 </html>
