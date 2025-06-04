@@ -1,105 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Texto Especial</title>
-    <audio id="player" autoplay>
-        <source src="musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
-        <source src="musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-    
-    <script>
-        const musicas = [
-            "/musicas/musica1.mp3",
-            "/musicas/musica2.mp3"
-        ];
-        
-        let index = 0;
-        const player = document.getElementById("player");
-        
-        player.volume = 0.1; // Define o volume para 10% (bem baixo)
-    
-        player.addEventListener("ended", function () {
-            index = (index + 1) % musicas.length; // Alterna entre as músicas
-            player.src = musicas[index];
-            player.play();
-        });
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Gótica com Áudio</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff007f, #0044ff);
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
 
-        body {
-            height: 100vh;
-            background: url('imgs/Copia_de_you_3.png') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            color: #fff;
-        }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background-image: url("imgs/sua-imagem.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
 
-        .content {
-            background-color: rgba(143, 9, 9, 0.795); /* Fundo translúcido para facilitar a leitura */
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            filter: grayscale(100%);
-        }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ff66cc;
+      text-shadow: 2px 2px #000;
+    }
 
-        .content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #c00;
-        }
+    .volume-control, .audio-player {
+      background: linear-gradient(to right, #830083, #0044ff);
+      padding: 15px;
+      border-radius: 15px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 15px #000;
+    }
 
-        .content p {
-            margin-top: 20px;
-            color: #ddd;
-        }
+    label {
+      font-size: 14px;
+      margin-right: 10px;
+    }
 
-        .image-container {
-            margin-top: 30px;
-        }
+    input[type="range"] {
+      width: 100%;
+    }
 
-        .image-container img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-        }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-        @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-            }
-            .content h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px #000;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>em reforma</h1>
-        <p>Não é só isso… Eu lembro de muito mais, como o fato de que você não gosta que te chame pelo seu nome por causa da carga emocional que ele carrega, ou que você tem 9 gatos, o Pingo, a Ravena, o Chorão, o Capuccino, e os outros que você ainda não me falou o nome, ksksk. Seu aniversário é 29 de outubro, você nasceu em 2001 e tem 23 anos. Você ama a música '10’s (2016 Remaster)' porque foi dedicada a você, 'você é linda assim como esse solo de guitarra.' Sua banda favorita é 'Type O Negative', e claro, muitas coisas que só falo em poesias, mas ainda é pouco para expressar tudo o que sei e sinto por você. Como você disse: 'Eu te amo tanto que a única maneira que eu poderia mostrar isso é abrindo meu peito e te dando meu coração.' E mesmo assim, não seria o suficiente, porque para mim você é meu universo, tão grande e vasto, cheio de maravilhas e beleza, assim como uma nebulosa formando sua constelação. Se fosse para te definir, seus cabelos seriam como uma nebulosa, seus olhos como duas Vicanis Majores, e seu sorriso, como a explosão de uma nova que toma conta de todo o ambiente e faz a escuridão se afastar. Essa imagem aqui, logo que você deu esse sorriso, eu não pensei duas vezes. Fiquei vidrado. Meus olhos viraram e vi o sorriso mais lindo de toda a minha vida, e não é exagero. E eu quero mais disso. Quero mais de você. Quero muito viver isso e me tornar um só com você, por toda a eternidade...</p>
-        
-        <div class="image-container">
-            <img src="imgs/sorriso mais lindo.png" alt="Imagem de Solara">
-        </div>
-        <p>e para finalizar...br</p>
-        <a href="pag3.html">👉🔆Aqui🔆👈</a>
+  <div class="background"></div>
+
+  <h1>🎧 Bem-vindo ao Som da Alma</h1>
+
+  <!-- Música de fundo -->
+  <div class="volume-control">
+    <label for="bgVolume">Volume da Música de Fundo</label>
+    <input type="range" id="bgVolume" min="0" max="1" step="0.01" value="0.1" />
+  </div>
+  <audio id="bgMusic" loop autoplay>
+    <source src="musicas/fundo.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <!-- 4 Players -->
+  <div class="audio-player">
+    <strong>Voz 1</strong><br />
+    <audio id="audio1" src="musicas/mensagem1.mp3"></audio>
+    <input type="range" id="vol1" min="0" max="1" step="0.01" value="0.1" />
+    <input type="range" id="seek1" value="0" step="1" />
+    <div class="controls">
+      <button onclick="togglePlay('audio1')">Play/Pause</button>
     </div>
+  </div>
+
+  <div class="audio-player">
+    <strong>Voz 2</strong><br />
+    <audio id="audio2" src="musicas/mensagem2.mp3"></audio>
+    <input type="range" id="vol2" min="0" max="1" step="0.01" value="0.1" />
+    <input type="range" id="seek2" value="0" step="1" />
+    <div class="controls">
+      <button onclick="togglePlay('audio2')">Play/Pause</button>
+    </div>
+  </div>
+
+  <div class="audio-player">
+    <strong>Voz 3</strong><br />
+    <audio id="audio3" src="musicas/mensagem3.mp3"></audio>
+    <input type="range" id="vol3" min="0" max="1" step="0.01" value="0.1" />
+    <input type="range" id="seek3" value="0" step="1" />
+    <div class="controls">
+      <button onclick="togglePlay('audio3')">Play/Pause</button>
+    </div>
+  </div>
+
+  <div class="audio-player">
+    <strong>Voz 4</strong><br />
+    <audio id="audio4" src="musicas/mensagem4.mp3"></audio>
+    <input type="range" id="vol4" min="0" max="1" step="0.01" value="0.1" />
+    <input type="range" id="seek4" value="0" step="1" />
+    <div class="controls">
+      <button onclick="togglePlay('audio4')">Play/Pause</button>
+    </div>
+  </div>
+
+  <script>
+    // Música de fundo
+    const bgMusic = document.getElementById("bgMusic");
+    const bgVolume = document.getElementById("bgVolume");
+    bgMusic.volume = 0.1;
+    bgVolume.addEventListener("input", () => {
+      bgMusic.volume = bgVolume.value;
+    });
+
+    // Função para play/pause genérico
+    function togglePlay(id) {
+      const audio = document.getElementById(id);
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    // Volume e Seek para cada player
+    [1, 2, 3, 4].forEach(i => {
+      const audio = document.getElementById(`audio${i}`);
+      const vol = document.getElementById(`vol${i}`);
+      const seek = document.getElementById(`seek${i}`);
+
+      audio.volume = 0.1;
+
+      vol.addEventListener("input", () => {
+        audio.volume = vol.value;
+      });
+
+      audio.addEventListener("loadedmetadata", () => {
+        seek.max = audio.duration;
+      });
+
+      audio.addEventListener("timeupdate", () => {
+        seek.value = audio.currentTime;
+      });
+
+      seek.addEventListener("input", () => {
+        audio.currentTime = seek.value;
+      });
+    });
+  </script>
 </body>
 </html>
