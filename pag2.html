@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Página Gótica com Áudio</title>
+  <title>voce me ve?</title>
   <style>
     body {
       background: linear-gradient(135deg, #ff007f, #0044ff);
@@ -21,7 +21,7 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       z-index: -1;
-      background-image: url("imgs/sua-imagem.jpg");
+      background-image: url("imgs//designsemnome.png");
       background-size: cover;
       background-position: center;
       opacity: 0.1;
@@ -74,28 +74,45 @@
     button:hover {
       background-color: #444;
     }
+
+    .next-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: linear-gradient(to right, #ff007f, #0044ff);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bold;
+        box-shadow: 0 0 10px #000;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .next-button:hover {
+        background: linear-gradient(to left, #ff007f, #0044ff);
+        transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
   <div class="background"></div>
 
-  <h1>🎧 Bem-vindo ao Som da Alma</h1>
+  <h1>🎧 Bem-vinda</h1>
 
   <!-- Música de fundo -->
   <div class="volume-control">
     <label for="bgVolume">Volume da Música de Fundo</label>
-    <input type="range" id="bgVolume" min="0" max="1" step="0.01" value="0.1" />
+    <input type="range" id="bgVolume" min="0" max="1" step="0.01" value="0.005" />
   </div>
   <audio id="bgMusic" loop autoplay>
-    <source src="musicas/fundo.mp3" type="audio/mpeg" />
+    <source src="musica/Join Me In Death.mp3" type="audio/mpeg" />
     Seu navegador não suporta áudio.
   </audio>
 
   <!-- 4 Players -->
   <div class="audio-player">
     <strong>Voz 1</strong><br />
-    <audio id="audio1" src="musicas/mensagem1.mp3"></audio>
-    <input type="range" id="vol1" min="0" max="1" step="0.01" value="0.1" />
+    <audio id="audio1" src="audios/Telefone_1.mp3"></audio>
+    <input type="range" id="vol1" min="0" max="1" step="0.01" value="0.003" />
     <input type="range" id="seek1" value="0" step="1" />
     <div class="controls">
       <button onclick="togglePlay('audio1')">Play/Pause</button>
@@ -104,8 +121,8 @@
 
   <div class="audio-player">
     <strong>Voz 2</strong><br />
-    <audio id="audio2" src="musicas/mensagem2.mp3"></audio>
-    <input type="range" id="vol2" min="0" max="1" step="0.01" value="0.1" />
+    <audio id="audio2" src="audios/Telefone_2.mp3"></audio>
+    <input type="range" id="vol2" min="0" max="1" step="0.01" value="0.003" />
     <input type="range" id="seek2" value="0" step="1" />
     <div class="controls">
       <button onclick="togglePlay('audio2')">Play/Pause</button>
@@ -114,8 +131,8 @@
 
   <div class="audio-player">
     <strong>Voz 3</strong><br />
-    <audio id="audio3" src="musicas/mensagem3.mp3"></audio>
-    <input type="range" id="vol3" min="0" max="1" step="0.01" value="0.1" />
+    <audio id="audio3" src="audios/Telefone_3.mp3"></audio>
+    <input type="range" id="vol3" min="0" max="1" step="0.01" value="0.003" />
     <input type="range" id="seek3" value="0" step="1" />
     <div class="controls">
       <button onclick="togglePlay('audio3')">Play/Pause</button>
@@ -124,11 +141,16 @@
 
   <div class="audio-player">
     <strong>Voz 4</strong><br />
-    <audio id="audio4" src="musicas/mensagem4.mp3"></audio>
-    <input type="range" id="vol4" min="0" max="1" step="0.01" value="0.1" />
+    <audio id="audio4" src="audios/Telefone_r.mp3"></audio>
+    <input type="range" id="vol4" min="0" max="1" step="0.01" value="0.003" />
     <input type="range" id="seek4" value="0" step="1" />
     <div class="controls">
       <button onclick="togglePlay('audio4')">Play/Pause</button>
+    </div>
+
+    <!-- Botão para próxima página -->
+    <div style="margin-top: 40px;">
+    <a href="pag3.html" class="next-button">👉 Próxima Página</a>
     </div>
   </div>
 
@@ -136,7 +158,7 @@
     // Música de fundo
     const bgMusic = document.getElementById("bgMusic");
     const bgVolume = document.getElementById("bgVolume");
-    bgMusic.volume = 0.1;
+    bgMusic.volume = 0.007;
     bgVolume.addEventListener("input", () => {
       bgMusic.volume = bgVolume.value;
     });
