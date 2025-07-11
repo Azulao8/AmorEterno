@@ -1,163 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mensagem</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #2b004e, #a80092);
-      color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; /* <- Mudei de center para flex-start */
-      min-height: 100vh;
-      padding: 20px;
-      position: relative;
-      overflow-y: auto; /* <- Permite rolagem vertical */
-    }
-
-    .background-symbols {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-      opacity: 0.05;
-    }
-
-    .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 16px;
-      padding: 30px;
-      max-width: 800px;
-      width: 100%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .container p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
-
-    .button-area {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .next-btn {
-      background-color: #3f0063;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: background-color 0.3s;
-    }
-
-    .next-btn:hover {
-      background-color: #980198;
-    }
-
-    .social-buttons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-buttons a {
-      text-decoration: none;
-      padding: 10px 16px;
-      background-color: #333;
-      color: white;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .social-buttons a:hover {
-      background-color: #500149;
-    }
-
-    .audio-control {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 8px;
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      z-index: 100;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .audio-control input[type="range"] {
-      margin-left: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-
-      .social-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sussurros de um amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Crimson+Text:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imgs/Cópia de Wallpaper Anjel.png" type="image/x-icon">
 </head>
 <body>
-  <div class="audio-toggle" onclick="toggleVolumeMenu()">🔊</div>
-
-<div class="audio-menu" id="audioMenu">
-  <label for="volume">Volume</label>
-  <input type="range" id="volume" min="0" max="1" step="0.01" value="0.1">
-</div>
-
-  <div class="container">
-    <p>
-      Hoje é 28 de maio de 2025. São 12:47. Quanto tempo, né? Se você está lendo isso, talvez já esteja cansada. Talvez já esteja me tratando com aquela indiferença silenciosa... e, sim, talvez com raiva por eu ainda insistir. Mas me escuta por um instante, mesmo que em silêncio. Porque no meio de tudo... você foi o que me restou. E eu te peço perdão — não por amar, mas por incomodar. Por aparecer mais uma vez quando talvez você só queira distância. Eu não espero que acredite em mim. Nem quero forçar nada. Mas deixa eu te dizer, só isso: eu ainda te amo. Você foi a única — depois de tanto tempo — que realmente me enxergou. Que viu o Gabriel por trás de todas as camadas, das dores, das defesas. Eu sou apaixonado em tudo que é você. No seu jeito, no seu olhar, no silêncio que você carrega e até na confusão que às vezes te cerca. E mesmo que tudo pareça complicado... eu não me importo. Eu ainda estou aqui. Ainda tentando. Ainda acreditando que, se for com você, eu recomeço do zero quantas vezes forem necessárias. Estou refazendo aquela página que criei pra você. Talvez seja só uma tentativa tola, uma faísca de esperança que ainda carrego. Mas cada palavra ali é real. Cada frase, cada detalhe... é você. Queria que soubesse disso: você é a pessoa com quem eu sonho construir uma vida. Ter filhos. Um lar só nosso. Mesmo que eu precise me matar de trabalhar... só pra ver aquele seu sorriso ao final do dia. Porque, sinceramente, jamais amei um sorriso como o seu. Jamais amei um olhar como o seu. Jamais me conectei com uma alma como a sua. E por mais que eu tente seguir sem você... Foi você quem trouxe de volta a minha alegria. Foi por sua causa que voltei a desenhar. Que voltei a ouvir música e senti-las de verdade. Que voltei a escrever, a ler — mas ler por amor. E talvez você nem se lembre, mas ainda são Asolzinha e VY Canis Majoris... as mais poderosas, as mais perfeitas — como você. Pode me bater, me odiar, arrancar tudo de mim. Mas mesmo assim... o que sinto é verdadeiro. Eu não quero que acredite em mim agora. Só quero que me acompanhe, que veja o que estou tentando construir com as mãos, com o coração. Deixa eu te mostrar o que é amor de verdade. Me veja de novo.
-      O propósito dessa página... não é te convencer. É só um espaço onde posso respirar — onde posso colocar o que penso, o que ainda sinto... por você. Talvez eu nunca tenha uma resposta. Talvez, ao ler isso, você fique com raiva. Talvez brigue comigo em silêncio. Mas ainda assim... eu precisava tentar. Porque de alguma forma, mesmo machucado, mesmo sem certezas — eu continuo aqui. Eu depositei tudo em você. E sei... você sempre foi mais forte do que eu. Eu não consigo desistir. Mesmo quando tudo diz que eu deveria. E talvez agora você nem pense mais em mim. Mas eu... ainda penso em você. Pode parecer ridículo, pode parecer patético — talvez eu esteja errado, de novo. Não seria novidade, né? ksksks Mas isso não muda o fato de que você ainda é a Sol que eu conheci. A Sol que me fez sentir. A Sol que me fez acreditar. E mesmo que você me ignore agora... tá tudo bem. Porque uma hora, sim, eu vou cansar. Eu vou aceitar que preciso te deixar em paz. Mas antes disso, me deixa tentar uma última vez... Porque eu ainda lembro do que você dizia: “Eu não vou desistir fácil.” E por mais que o tempo passe, por mais que tudo mude... Você ainda é o Sol que eu amo. E mesmo que o mundo me cale, uma coisa eu prometo: Eu jamais vou te maltratar. Porque quando alguém mora tão fundo na gente, nem a dor muda o amor que ficou.
-    </p>
-    <div class="button-area">
-      <button class="next-btn" onclick="goToNextPage()">Next</button>
-      <div class="social-buttons">
-        <a href="https://www.tiktok.com/@ultraviolento29?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com/zaypn7/" target="_blank">Instagram</a>
-        <a href="https://discord.gg/QvTwQwVb" target="_blank">Discord</a>
-      </div>
+    <!-- Efeitos de fundo góticos -->
+    <div class="gothic-bg">
+        <div class="floating-roses" id="roses"><div class="rose" style="left: 59.8789%; animation-duration: 10.2953s; animation-delay: 4.62393s;">🌹</div><div class="rose" style="left: 41.1682%; animation-duration: 11.6329s; animation-delay: 1.94308s;">🌹</div><div class="rose" style="left: 9.40525%; animation-duration: 17.5018s; animation-delay: 1.89136s;">🌹</div><div class="rose" style="left: 38.1043%; animation-duration: 11.2772s; animation-delay: 3.52558s;">🌹</div><div class="rose" style="left: 26.2428%; animation-duration: 19.8664s; animation-delay: 2.08226s;">🌹</div><div class="rose" style="left: 8.22896%; animation-duration: 19.3961s; animation-delay: 3.78357s;">🌹</div><div class="rose" style="left: 15.1054%; animation-duration: 17.7223s; animation-delay: 2.75151s;">🌹</div></div>
+        <div class="gothic-ornaments">
+            <div class="ornament" style="top: 10%; left: 5%;">⚜</div>
+            <div class="ornament" style="top: 20%; right: 8%;">❦</div>
+            <div class="ornament" style="bottom: 15%; left: 10%;">⚜</div>
+            <div class="ornament" style="bottom: 25%; right: 15%;">❦</div>
+            <div class="ornament" style="top: 50%; left: 3%;">⚜</div>
+            <div class="ornament" style="top: 60%; right: 5%;">❦</div>
+        </div>
     </div>
-  </div>
 
-  <audio id="background-music" autoplay loop>
-    <source src="musica/billie_eilish_wildflower_violin.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <!-- Player de música -->
+    <div class="music-player">
+        <div class="volume-control">
+            <span>🎵</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="1">
+            <span id="volumeDisplay">1%</span>
+        </div>
+        <!-- SUBSTITUA O LINK ABAIXO PELA SUA MÚSICA -->
+        <audio id="backgroundMusic" loop="">
+            <source src="musics/Join Me In Death.mp3" type="audio/mpeg">
+            <source src="musics/Join Me In Death.mp3" type="audio/ogg">
+            Seu navegador não suporta áudio.
+        </audio>
+    </div>
 
-  <script>
-  const audio = document.getElementById('background-music');
-  const volumeControl = document.getElementById('volume');
-  audio.volume = 0.1;
+    <!-- Container principal -->
+    <div class="container">
+        <!-- ÁREA PARA SEU TEXTO DE AMOR - EDITE AQUI -->
+        <div class="love-text-area">
+            <h2>Amor Eterno</h2>
+            <p>Hoje é 11/07/2025. 3h16 da madrugada.
 
-  volumeControl.addEventListener('input', (e) => {
-    audio.volume = e.target.value;
-  });
+Talvez você nunca veja isso… mas se ver, já vai bastar.
 
-  // Espera por qualquer clique para iniciar o áudio
-  document.addEventListener('click', () => {
-    audio.play().catch(e => console.log("Autoplay bloqueado:", e));
-  }, { once: true });
+Eu não sou mais o mesmo ja to a um tempo sem beber, nem nas desculpas.
+Tenho mudado por mim, finalmente mas, não posso negar que parte disso começou por causa de você.
 
-  function goToNextPage() {
-    window.location.href = "pag1.html";
-  }
-</script>
-</body>
-</html>
+Você me disse uma vez que o problema estava na minha frente…
+Eu não entendi direito na época. Hoje entendo. E sinto muito.
+
+Isso aqui não é uma tentativa de volta e talvez seja mas, não quero forçar.
+É só uma lembrança crua, sincera, de quem ainda sente.
+
+Te ver seguindo sua vida sem se machucar mais, sem se perder, me deu uma paz estranha…
+Uma dor boa.
+Tipo observar um céu noturno que não te pertence mais.
+
+Eu me lembro de voce todos os dias seus olhos teu sorriso teu cabelo…
+de algumas coisas que voce gosta eu sempre penso em vc.
+
+E ainda penso nisso.
+Porque sua presença, pra mim, sempre foi isso:
+Viciante. Pura. E impossível de esquecer.
+
+Eu não sei se ainda penso em você porque te amo ou porque minha alma se acostumou com sua ausência.
+
+Talvez eu ainda viva em algum canto do teu coração.
+Se sim, saberei esperar o tempo certo,
+Me escuta em silêncio.
+Porque mesmo distante… ainda sou seu reflexo.
+
+Solzinha, mesmo que não volte, quero que saiba:
+Não vou cometer os mesmos erros.
+
+Talvez eu desapareça.
+Talvez não.
+
+Mas de todas as versões de mim,
+Essa…
+Foi feita pra te encontrar de novo, eu te amo.</p>
+        </div>
+
+        <!-- Botão para próxima página -->
+        <button class="gothic-button" onclick="nextPage()">
+            Próxima Página
+        </button>
+    </div>
+
+    <script src="js/style.js"></script>
+
+<iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body></html>
