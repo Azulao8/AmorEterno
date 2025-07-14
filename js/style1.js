@@ -30,7 +30,7 @@
 
         // Função para ir para próxima página
         function nextPage() {
-            alert('Aqui você pode adicionar o link para a próxima página!\n\nExemplo: window.location.href = "terceira-pagina.html";');
+            window.location.href = '/pags/pag2.html';
             // Exemplo: window.location.href = 'terceira-pagina.html';
         }
 
