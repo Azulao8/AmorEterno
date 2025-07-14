@@ -1,0 +1,399 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1b2d 50%, #1a0a1a 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efeitos de fundo góticos */
+        .gothic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            color: #8b0000;
+            font-size: 20px;
+            opacity: 0.2;
+            animation: floatHeart 20s infinite linear;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.2;
+            }
+            90% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .gothic-ornaments {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ornament {
+            position: absolute;
+            color: #4a0e4e;
+            font-size: 36px;
+            opacity: 0.08;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.08; transform: scale(1); }
+            50% { opacity: 0.15; transform: scale(1.1); }
+        }
+
+        /* Container principal */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        /* Player de música */
+        .music-player {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(26, 10, 26, 0.95);
+            border: 2px solid #8b0000;
+            border-radius: 15px;
+            padding: 15px;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(139, 0, 0, 0.4);
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e6e6fa;
+            font-size: 14px;
+        }
+
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            background: #4a0e4e;
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #8b0000;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+        }
+
+        .volume-slider::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #8b0000;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+        }
+
+        /* Título da página */
+        .page-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            color: #8b0000;
+            font-size: 42px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Seção de conteúdo */
+        .content-section {
+            margin-bottom: 60px;
+            background: rgba(26, 10, 26, 0.3);
+            border: 2px solid #8b0000;
+            border-radius: 15px;
+            padding: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(139, 0, 0, 0.2);
+        }
+
+        /* Área de texto editável */
+        .text-area {
+            color: #e6e6fa;
+            font-size: 20px;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .text-area h3 {
+            font-family: 'Cinzel', serif;
+            color: #8b0000;
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .text-area p {
+            margin-bottom: 20px;
+        }
+
+        /* Galeria de imagens */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .image-slot {
+            position: relative;
+            aspect-ratio: 1;
+            border: 3px dashed #8b0000;
+            border-radius: 10px;
+            background: rgba(139, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #e6e6fa;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .image-slot:hover {
+            border-color: #e6e6fa;
+            background: rgba(139, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .image-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-placeholder {
+            font-size: 48px;
+            color: #8b0000;
+            margin-bottom: 15px;
+        }
+
+        .image-instructions {
+            font-size: 14px;
+            color: #e6e6fa;
+            opacity: 0.8;
+        }
+
+        /* Layout especial para imagens */
+        .image-text-combo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .single-image-slot {
+            aspect-ratio: 4/3;
+            border: 3px dashed #8b0000;
+            border-radius: 15px;
+            background: rgba(139, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #e6e6fa;
+            text-align: center;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .single-image-slot:hover {
+            border-color: #e6e6fa;
+            background: rgba(139, 0, 0, 0.2);
+        }
+
+        .single-image-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Botão gótico */
+        .gothic-button {
+            background: linear-gradient(45deg, #4a0e4e, #8b0000);
+            border: 2px solid #8b0000;
+            color: #e6e6fa;
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+            display: block;
+            margin: 60px auto 0;
+        }
+
+        .gothic-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .gothic-button:hover::before {
+            left: 100%;
+        }
+
+        .gothic-button:hover {
+            background: linear-gradient(45deg, #8b0000, #4a0e4e);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.6);
+        }
+
+        .gothic-button:active {
+            transform: translateY(0);
+        }
+
+        /* Instruções para edição */
+        .edit-instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 10, 26, 0.95);
+            border: 1px solid #8b0000;
+            border-radius: 10px;
+            padding: 15px;
+            color: #e6e6fa;
+            font-size: 12px;
+            max-width: 320px;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .edit-instructions h4 {
+            color: #8b0000;
+            margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .content-section {
+                padding: 25px;
+                margin-bottom: 40px;
+            }
+
+            .text-area {
+                font-size: 18px;
+            }
+
+            .text-area h3 {
+                font-size: 22px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .image-text-combo {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .music-player {
+                top: 20px;
+                right: 20px;
+                padding: 12px;
+            }
+
+            .edit-instructions {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 24px;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .text-area {
+                font-size: 16px;
+            }
+
+            .text-area h3 {
+                font-size: 20px;
+            }
+        }

@@ -1,202 +1,139 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-BR"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nos</title>
+    <title>Galeria do Amor Gótico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Crimson+Text:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style1.css">
     
-    <!-- PLAYER DE MÚSICA -->
-    <audio id="player" autoplay loop>
-        <source src="musica/Angel (Remastered 2019).mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to bottom, #590074, #5f0063); /* rosa para azul */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #c00;
-            margin-bottom: 10px;
-        }
-
-        .volume-control {
-            margin-bottom: 30px;
-            background-color: rgba(124, 0, 161, 0.7);
-            padding: 10px 15px;
-            border-radius: 10px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .volume-control label {
-            color: #fff;
-            font-size: 14px;
-        }
-
-        .volume-control input[type="range"] {
-            width: 100px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .gallery-item {
-            background-color: #59017c6e;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .gallery-item p {
-            margin-top: 10px;
-            color: #ddd;
-        }
-
-        a {
-            color: #c00;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-        }
-    </style>
 </head>
 <body>
-
-    <h1>Nos podemos?</h1>
-
-    <!-- CONTROLE DE VOLUME ABAIXO DO TÍTULO -->
-    <div class="volume-control">
-        <label for="volume">Volume 🎵</label>
-        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.03">
-    </div>
-
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="imgs/Captura_de_tela_2025-03-08_112422.png" alt="Descrição da imagem 3">
-            <p>
-                Me diz uma coisa... você também sente que, apesar de tudo, alguma parte aí dentro ainda lembra do que fomos?
-
-A gente era novo. E sim... fomos ingênuos.
-
-Não estávamos prontos. Não pra tudo que sentimos, não pro que o mundo jogou em cima da gente.
-
-Mas não foi só o que aconteceu que separou a gente.
-
-A vida virou de ponta-cabeça. Tudo mudou.
-
-E sabe o que é curioso?
-
-Nós mudamos também.
-
-E por mais estranho que pareça... isso é bom.
-
-Porque agora, quando olho pra você, não vejo só aquela menina que me fazia rir com qualquer besteira...
-
-Vejo uma mulher.
-Forte, intensa, bonita de um jeito que vai além do que os olhos enxergam.
-
-E eu gosto disso.
-
-Gosto de quem você é.
-
-E antes que essa página se perca como tantas outras conversas que não tivemos... me deixa dizer só mais uma coisa:
-
-Me desculpa.
-
-Nunca foi minha intenção te magoar.
-
-E se em algum momento pareceu que o que eu sentia tinha sumido... não se engane.
-
-Porque o que sinto por você é o mesmo desde o primeiro dia.
-
-Nunca mudou.
-
-Nunca vai ser leve esquecer alguém que fez a alma acordar.
-
-E você foi exatamente isso: o despertar da minha alma.
-            </p>
-            <p>
-                Eu sei... talvez não dê mais pra continuar.
-
-Talvez tudo tenha passado do ponto. Talvez a gente já tenha se machucado demais, falado de menos, e esperado por respostas que nunca vieram.
-
-Mas, mesmo assim...
-
-Eu acredito em uma coisa:
-
-Acredito no que você acredita.
-
-Porque eu sei que, no fundo — bem no fundo — você ainda acredita que dá pra recomeçar.
-
-Não como antes. Mas com mais verdade.
-Com mais calma.
-Com mais presença.
-
-Eu vejo isso em você... essa esperança discreta que esconde no meio do olhar quando finge que já não sente mais nada.
-
-E talvez a gente não precise de promessas.
-Talvez tudo que a gente precise...
-
-seja só uma chance de sentir de novo.
-
-Só isso.
-            </p>
+    <!-- Efeitos de fundo góticos -->
+    <div class="gothic-bg">
+        <div class="floating-hearts" id="hearts"><div class="heart" style="left: 94.522%; animation-duration: 21.4661s; animation-delay: 4.59822s;">🖤</div><div class="heart" style="left: 23.7985%; animation-duration: 23.113s; animation-delay: 0.628373s;">🖤</div><div class="heart" style="left: 11.9712%; animation-duration: 20.5332s; animation-delay: 3.16862s;">💙</div><div class="heart" style="left: 66.5365%; animation-duration: 28.489s; animation-delay: 7.90271s;">🖤</div><div class="heart" style="left: 55.0216%; animation-duration: 23.6361s; animation-delay: 6.29776s;">💙</div><div class="heart" style="left: 87.1326%; animation-duration: 26.7895s; animation-delay: 2.23702s;">🤍</div></div>
+        <div class="gothic-ornaments">
+            <div class="ornament" style="top: 8%; left: 3%;">❦</div>
+            <div class="ornament" style="top: 15%; right: 5%;">⚜</div>
+            <div class="ornament" style="top: 45%; left: 2%;">❦</div>
+            <div class="ornament" style="bottom: 20%; right: 8%;">⚜</div>
+            <div class="ornament" style="bottom: 35%; left: 6%;">❦</div>
+            <div class="ornament" style="top: 70%; right: 3%;">⚜</div>
         </div>
     </div>
 
-    <div><p>🔽</p></div>
-    <div><a href="pag2.html">Veja mais...</a></div>
+    <!-- Player de música -->
+    <div class="music-player">
+        <div class="volume-control">
+            <span>🎵</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="01">
+            <span id="volumeDisplay">1%</span>
+        </div>
+        <!-- SUBSTITUA O LINK ABAIXO PELA SUA MÚSICA -->
+        <audio id="backgroundMusic" loop="">
+            <source src="/musics/Join Me In Death.mp3" type="audio/mpeg">
+            <source src="/musics/Join Me In Death.mp3" type="audio/ogg">
+            Seu navegador não suporta áudio.
+        </audio>
+    </div>
 
-    <!-- SCRIPT DE CONTROLE DE MÚSICA -->
-    <script>
-        const player = document.getElementById("player");
-        const volumeControl = document.getElementById("volume");
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Título da página -->
+        <h1 class="page-title">Galeria do Nosso Amor</h1>
 
-        // Volume inicial baixo
-        player.volume = 0.03;
+        <!-- Primeira seção: Texto + Galeria de imagens -->
+        <div class="content-section">
+            <!-- ÁREA PARA SEU TEXTO - EDITE AQUI -->
+            <div class="text-area">
+                <h3>Momentos Eternos</h3>
+                <p>Cada fotografia captura um fragmento da nossa eternidade, um instante onde o tempo se curva diante da intensidade do nosso amor. Nas sombras e na luz, encontramos a beleza que transcende o comum.</p>
+                <p>Estas imagens são testemunhas silenciosas da nossa paixão gótica, guardiãs dos segredos sussurrados entre beijos roubados sob a lua crescente.</p>
+            </div>
 
-        // Alterar volume em tempo real
-        volumeControl.addEventListener("input", () => {
-            player.volume = volumeControl.value;
-        });
+            <!-- Galeria de imagens - ADICIONE SUAS IMAGENS AQUI -->
+            <div class="image-gallery">
+                <div class="image-slot">
+                    <div class="image-placeholder">📷</div>
+                    <div class="image-instructions">
+                        <strong>Adicione sua primeira imagem aqui</strong><br>
+                        Substitua este espaço por: &lt;img src="sua-imagem1.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+                <div class="image-slot">
+                    <div class="image-placeholder">📷</div>
+                    <div class="image-instructions">
+                        <strong>Adicione sua segunda imagem aqui</strong><br>
+                        Substitua este espaço por: &lt;img src="sua-imagem2.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+                <div class="image-slot">
+                    <div class="image-placeholder">📷</div>
+                    <div class="image-instructions">
+                        <strong>Adicione sua terceira imagem aqui</strong><br>
+                        Substitua este espaço por: &lt;img src="sua-imagem3.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        // Força o autoplay após interação (caso necessário por bloqueio do navegador)
-        document.addEventListener("click", () => {
-            player.play().catch(err => console.log("Autoplay bloqueado:", err));
-        }, { once: true });
-    </script>
-</body>
-</html>
+        <!-- Segunda seção: Imagem + Texto lado a lado -->
+        <div class="content-section">
+            <div class="image-text-combo">
+                <!-- ESPAÇO PARA IMAGEM GRANDE - EDITE AQUI -->
+                <div class="single-image-slot">
+                    <div class="image-placeholder">🖼️</div>
+                    <div class="image-instructions">
+                        <strong>Imagem principal</strong><br>
+                        Adicione uma imagem especial aqui<br>
+                        &lt;img src="imagem-principal.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+
+                <!-- ÁREA PARA TEXTO - EDITE AQUI -->
+                <div class="text-area">
+                    <h3>Palavras do Coração</h3>
+                    <p>Ao seu lado, descobri que o amor verdadeiro não conhece limites nem fronteiras. Como duas almas perdidas que se encontraram na escuridão, criamos nossa própria luz.</p>
+                    <p>Você é minha inspiração gótica, minha musa das sombras, aquela que desperta em mim os sentimentos mais profundos e verdadeiros.</p>
+                    <p>Que nossa história continue sendo escrita com tinta de estrelas e lágrimas de felicidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terceira seção: Mais texto e imagens -->
+        <div class="content-section">
+            <!-- ÁREA PARA TEXTO FINAL - EDITE AQUI -->
+            <div class="text-area">
+                <h3>Promessas Eternas</h3>
+                <p>Nas páginas do tempo, nossa história será lembrada como um conto de amor que desafiou todas as convenções. Um amor gótico, intenso e verdadeiro, que floresceu entre rosas negras e luar prateado.</p>
+                <p>Prometo amar você além desta vida, além do tempo, além de tudo que é mortal e passageiro. Nosso amor é eterno como as estrelas que testemunharam nosso primeiro beijo.</p>
+            </div>
+
+            <!-- Mais espaços para imagens -->
+            <div class="image-gallery">
+                <div class="image-slot">
+                    <div class="image-placeholder">📷</div>
+                    <div class="image-instructions">
+                        <strong>Quarta imagem</strong><br>
+                        &lt;img src="sua-imagem4.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+                <div class="image-slot">
+                    <div class="image-placeholder">📷</div>
+                    <div class="image-instructions">
+                        <strong>Quinta imagem</strong><br>
+                        &lt;img src="sua-imagem5.jpg" alt="Descrição"&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão para próxima página -->
+        <button class="gothic-button" onclick="nextPage()">
+            Continuar Jornada
+        </button>
+    </div>
+
+    <script src="/js/style1.js"></script>
+
+    <iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body></html>
