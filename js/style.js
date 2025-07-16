@@ -29,7 +29,7 @@
 
         // Função para ir para próxima página
         function nextPage() {
-            window.location.href = 'pags/pag1.html';
+            window.location.href = 'pag1.html';
             // Exemplo: window.location.href = 'proxima-pagina.html';
         }
 
